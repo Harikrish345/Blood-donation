@@ -1,0 +1,211 @@
+:root{--red:#d9343d;--deep:#17181c;--ink:#25262b;--muted:#74757b;--line:#e8e5e2;--cream:#f7f5f2;--white:#fff;--admin-color:#b91c1c;--hospital-color:#1e40af;--donor-color:#047857}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:"DM Sans",sans-serif;background:var(--white)}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{font-family:Manrope,sans-serif}
+h1{font-size:clamp(4rem,7.3vw,7.4rem);line-height:.92;letter-spacing:-.07em;margin:22px 0 28px}
+h2{font-size:clamp(2.4rem,4vw,4.2rem);line-height:1;letter-spacing:-.06em;margin:13px 0 24px}
+h3{font-size:1.25rem}
+.section-wrap{max-width:1240px;margin:auto;padding-left:32px;padding-right:32px}
+
+/* Site Header */
+.site-header{height:82px;display:flex;align-items:center;justify-content:space-between;max-width:1304px;margin:auto;padding:0 32px}
+.brand{display:flex;gap:11px;align-items:center;color:var(--ink);font-family:Manrope;font-size:1.17rem;text-decoration:none;line-height:1}
+.brand>span:last-child{padding-top:2px}
+.brand>span>span{color:var(--red)}
+.brand small{display:block;font:500 .52rem "DM Sans";letter-spacing:.1em;text-transform:uppercase;color:#9a9896;margin-top:6px}
+.brand-mark{width:35px;height:35px;border-radius:50%;background:var(--red);color:white;display:grid;place-items:center;font:500 1.6rem "DM Sans"}
+.main-nav{display:flex;align-items:center;gap:20px}
+.main-nav a{color:#77757a;font-size:.86rem;text-decoration:none}
+.main-nav a:hover,.main-nav a.active{color:var(--ink)}
+
+/* Buttons */
+.button{border:0;border-radius:4px;padding:12px 18px;font:600 .8rem "DM Sans";cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:12px}
+.button span{font-size:1.1rem}
+.button-primary{background:var(--red);color:white}
+.button-primary:hover{background:#b9252e}
+.button-dark{background:var(--deep);color:white}
+.button-outline{background:transparent;border:1px solid #c9c5c2}
+.button-light{background:#fff;color:var(--deep)}
+.button-sm{padding:7px 12px;font-size:.75rem}
+.hidden{display:none !important}
+
+/* Urgent Alert Banner */
+.urgent-banner{background:#fff1f2;border-bottom:1px solid #fecdd3;padding:10px 0;font-size:.82rem}
+.urgent-banner-inner{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.pulse-dot.red{background:var(--red);animation:pulse 1.5s infinite}
+@keyframes pulse { 0%{opacity:1} 50%{opacity:0.4} 100%{opacity:1} }
+.banner-text{color:#9f1239}
+.banner-btn{background:var(--red);color:#fff;border:0;padding:6px 14px;border-radius:3px;font-weight:600;cursor:pointer}
+
+/* User Badge in Nav */
+.user-badge-container{display:flex;align-items:center;gap:10px;background:#f3f4f6;padding:5px 12px;border-radius:30px;border:1px solid #e5e7eb}
+.user-role-badge{font-size:.65rem;font-weight:800;padding:3px 8px;border-radius:20px;color:#fff;text-transform:uppercase}
+.user-role-badge.ADMIN{background:var(--admin-color)}
+.user-role-badge.HOSPITAL{background:var(--hospital-color)}
+.user-role-badge.DONOR{background:var(--donor-color)}
+.user-name{font-size:.8rem;font-weight:600}
+.logout-link{color:#6b7280;font-size:.75rem;cursor:pointer;border:0;background:none;text-decoration:underline}
+
+/* Hero Section */
+.hero{min-height:600px;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero-copy{width:57%;padding:60px 0}
+.eyebrow{font:700 .67rem "DM Sans";letter-spacing:.19em;color:var(--red)}
+.pulse-dot{display:inline-block;width:7px;height:7px;background:#46b786;border-radius:50%;margin-right:8px}
+.hero h1 em,h2 em{font-style:normal;color:var(--red)}
+.hero-text{color:var(--muted);font-size:1rem;line-height:1.75;max-width:460px}
+.hero-actions{display:flex;align-items:center;gap:16px;margin-top:35px}
+.text-link{color:var(--ink);font-size:.83rem;font-weight:700;text-decoration:none;border-bottom:1px solid #bbb;padding-bottom:6px}
+.hero-stats{display:flex;gap:47px;border-top:1px solid var(--line);margin-top:60px;padding-top:21px}
+.hero-stats strong{display:block;font:700 1.25rem Manrope}
+.hero-stats span{display:block;color:var(--muted);font-size:.7rem;margin-top:6px}
+.hero-visual{width:43%;height:500px;position:relative;background:#f8e8e6;border-radius:50% 50% 8px 8px;align-self:flex-end;overflow:hidden}
+.hero-visual:after{content:"";position:absolute;inset:70px 40px 0;background:linear-gradient(145deg,#e87a75,#c72d39);border-radius:48% 48% 0 0;opacity:.93}
+.ring{position:absolute;border:1px solid rgba(255,255,255,.4);border-radius:50%;z-index:2}
+.ring-one{width:410px;height:410px;top:70px;left:50px}
+.ring-two{width:275px;height:275px;top:138px;left:118px}
+.blood-drop{z-index:3;position:absolute;top:170px;left:50%;transform:translateX(-50%);font:700 8rem Manrope;color:rgba(255,255,255,.9)}
+.floating-card{position:absolute;z-index:4;background:#fff;padding:15px 18px;display:flex;gap:11px;align-items:center;box-shadow:0 12px 35px #8c313327;border-radius:3px;font-size:.75rem}
+.floating-card b,.floating-card small{display:block}
+.floating-card small{color:var(--muted);font-size:.65rem;margin-top:4px}
+.card-top{right:14px;top:150px}
+.card-bottom{left:18px;bottom:85px}
+.mini-icon{color:var(--red);font-size:1.25rem}
+.check{background:#d9f2e7;color:#23966b;border-radius:50%;width:24px;height:24px;display:grid;place-items:center}
+.trust-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust-inner{min-height:75px;display:flex;justify-content:space-between;align-items:center;color:#969397}
+.trust-inner span{font-size:.62rem;letter-spacing:.15em}
+.trust-inner b{font:700 1.15rem Manrope}
+
+/* Role Access Cards */
+.role-cards-section{padding-top:70px;padding-bottom:30px}
+.role-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.role-card{border:1px solid var(--line);padding:30px;border-radius:8px;background:#fafafa;position:relative;transition:transform 0.2s, box-shadow 0.2s}
+.role-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,0.06)}
+.role-badge{font-size:.65rem;font-weight:800;letter-spacing:.1em;display:inline-block;padding:4px 10px;border-radius:4px;color:#fff;margin-bottom:15px}
+.admin-card .role-badge{background:var(--admin-color)}
+.hospital-card .role-badge{background:var(--hospital-color)}
+.donor-card .role-badge{background:var(--donor-color)}
+.role-card h3{font-size:1.2rem;margin-bottom:10px}
+.role-card p{font-size:.82rem;color:var(--muted);line-height:1.6;margin-bottom:20px}
+
+/* Inventory Grid */
+.section{padding-top:80px;padding-bottom:80px}
+.section-heading{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:35px}
+.section-heading h2{margin-bottom:0}
+.availability-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.blood-card{border:1px solid var(--line);padding:22px 20px;position:relative;border-radius:6px;background:#fff}
+.blood-card .group{font:700 2rem Manrope}
+.blood-card .units{font-size:.78rem;color:var(--muted);margin-top:12px}
+.status{font-size:.65rem;font-weight:700;display:flex;align-items:center;gap:7px;margin-top:24px}
+.status:before{content:"";width:6px;height:6px;border-radius:50%;background:#42b783}
+.status.low:before{background:#efa943}
+.status.critical:before{background:var(--red)}
+.blood-card .bar{height:4px;background:#edeceb;margin-top:15px;border-radius:2px;overflow:hidden}
+.blood-card .bar i{display:block;height:100%;background:#5bc296}
+.blood-card .bar i.low{background:#efa943}
+.blood-card .bar i.critical{background:var(--red)}
+
+/* Camps Section */
+.camp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.camp-card{border:1px solid var(--line);padding:25px 20px;display:flex;gap:17px;min-height:210px;border-radius:6px;background:#fff}
+.camp-card.featured{background:var(--deep);color:#fff;border-color:var(--deep)}
+.camp-date{border-right:1px solid var(--line);padding-right:16px;min-width:52px}
+.featured .camp-date{border-color:#44454b}
+.camp-date b{display:block;font:700 2rem Manrope;letter-spacing:-.08em}
+.camp-date span{font-size:.62rem;line-height:1.45;color:var(--muted)}
+.tag{font-size:.56rem;letter-spacing:.12em;color:var(--red);font-weight:700}
+.camp-card h3{margin:15px 0 9px;font-size:1.12rem}
+.camp-card p{font-size:.76rem;color:var(--muted)}
+.camp-foot{border-top:1px solid var(--line);margin-top:28px;padding-top:14px;display:flex;justify-content:space-between;align-items:center;font-size:.66rem;color:var(--muted)}
+.featured .camp-foot{border-color:#44454b}
+.arrow-button{border:0;border-radius:50%;background:var(--red);color:#fff;width:29px;height:29px;cursor:pointer}
+
+/* Urgent Section */
+.urgent{max-width:1176px;margin:0 auto 80px;background:var(--red);color:#fff;padding:60px 65px;display:flex;justify-content:space-between;align-items:center;border-radius:8px}
+.urgent h2{font-size:3rem;margin:14px 0}
+.urgent p{font-size:.9rem;line-height:1.6;max-width:410px;color:#ffdfe0}
+.urgent-types{display:flex;gap:12px}
+.urgent-types div{border:1px solid #eb777b;padding:19px 25px;text-align:center;border-radius:6px;background:rgba(255,255,255,0.08)}
+.urgent-types strong{display:block;font:700 2rem Manrope}
+.urgent-types span{font-size:.62rem;color:#ffd1d2}
+
+/* Footer */
+footer{background:var(--deep);color:#fff;padding-top:65px}
+.footer-inner{display:flex;justify-content:space-between;padding-bottom:75px}
+.footer-brand{color:#fff}
+.footer-inner p{color:#96969b;font-size:.78rem;line-height:1.6;margin-top:25px}
+.footer-links{display:flex;gap:80px}
+.footer-links>div{display:flex;flex-direction:column;gap:11px}
+.footer-links b{font-size:.7rem;color:#fff;margin-bottom:8px}
+.footer-links a,.footer-links span{color:#96969b;text-decoration:none;font-size:.75rem}
+.copyright{border-top:1px solid #34353a;padding-top:18px;padding-bottom:22px;color:#77777e;font-size:.65rem}
+
+/* Modals & Backdrop */
+.modal-backdrop{display:none;position:fixed;z-index:100;inset:0;background:rgba(18,19,22,0.65);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px}
+.modal-backdrop.open{display:flex}
+.modal{background:#fff;width:min(100%,480px);padding:35px;position:relative;box-shadow:0 25px 80px rgba(0,0,0,0.25);border-radius:8px;max-height:90vh;overflow-y:auto}
+.modal.large-modal{width:min(100%,560px)}
+.modal h2{font-size:2rem;margin-bottom:10px}
+.modal>p{color:var(--muted);font-size:.82rem;line-height:1.5}
+.modal-close{position:absolute;right:18px;top:14px;border:0;background:none;font-size:1.6rem;color:var(--muted);cursor:pointer}
+.modal form{margin-top:20px}
+.modal label{display:block;color:var(--ink);font-size:.75rem;font-weight:600;margin-bottom:15px}
+.modal input,.modal select{display:block;width:100%;border:1px solid var(--line);padding:12px;margin-top:6px;font:inherit;font-size:.82rem;border-radius:4px;outline-color:var(--red)}
+.modal .button{width:100%;justify-content:center;margin-top:15px}
+.form-message{font-size:.75rem;color:#278c65;margin-top:13px;min-height:16px;font-weight:600}
+
+/* Demo Box inside Login Modal */
+.demo-box{background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:15px;margin-top:15px;margin-bottom:20px}
+.demo-box-title{font-size:.75rem;font-weight:700;color:#334155;margin-bottom:10px}
+.demo-buttons-group{display:flex;flex-direction:column;gap:8px}
+.demo-chip{border:1px solid #cbd5e1;background:#fff;padding:8px 12px;border-radius:6px;cursor:pointer;text-align:left;font-size:.78rem;font-weight:700;display:flex;justify-content:space-between;align-items:center;transition:background 0.2s}
+.demo-chip:hover{background:#f1f5f9}
+.demo-chip small{font-weight:400;color:#64748b;font-size:.7rem}
+.chip-admin{border-left:4px solid var(--admin-color)}
+.chip-hospital{border-left:4px solid var(--hospital-color)}
+.chip-donor{border-left:4px solid var(--donor-color)}
+
+/* Dashboard Modal & Multi-tab layout */
+.dashboard-modal-wrap{width:min(100%,920px);padding:30px}
+.dashboard-header{display:flex;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:20px}
+.dash-user-chip{background:#f1f5f9;border:1px solid #cbd5e1;padding:6px 14px;border-radius:20px;font-size:.75rem;font-weight:700;color:#334155}
+
+/* Dashboard Tabs */
+.dash-tabs{display:flex;gap:8px;border-bottom:2px solid var(--line);margin-bottom:20px;overflow-x:auto}
+.dash-tab{background:none;border:0;padding:10px 18px;font:700 .8rem "DM Sans";color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;transition:0.2s}
+.dash-tab:hover{color:var(--ink)}
+.dash-tab.active{color:var(--red);border-bottom-color:var(--red)}
+
+.tab-pane{display:none}
+.tab-pane.active{display:block}
+.pane-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}
+.pane-header h3{margin:0;font-size:1.1rem}
+.pane-header .muted{font-size:.75rem;color:var(--muted)}
+
+/* Tables */
+.table-scroll{overflow-x:auto;max-height:420px;border:1px solid var(--line);border-radius:6px}
+.data-table{width:100%;border-collapse:collapse;text-align:left;font-size:.8rem}
+.data-table th{background:#f8fafc;padding:12px;font-weight:700;color:#475569;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:2}
+.data-table td{padding:12px;border-bottom:1px solid #f1f5f9;color:#334155}
+.data-table tr:hover{background:#f8fafc}
+.data-table input[type="number"]{width:70px;padding:4px 8px;font-size:.8rem;border:1px solid #cbd5e1;border-radius:4px}
+.badge-status{display:inline-block;padding:3px 8px;border-radius:12px;font-size:.65rem;font-weight:800;text-transform:uppercase}
+.badge-status.PENDING{background:#fef3c7;color:#92400e}
+.badge-status.APPROVED{background:#dcfce7;color:#166534}
+.badge-status.REJECTED{background:#fee2e2;color:#991b1b}
+.badge-status.BOOKED{background:#dbeafe;color:#1e40af}
+
+/* Responsive */
+@media(max-width:850px){
+  .main-nav{display:none;position:absolute;z-index:8;top:70px;left:0;right:0;background:white;flex-direction:column;align-items:stretch;padding:20px 32px;box-shadow:0 10px 20px #0001}
+  .main-nav.open{display:flex}
+  .menu-toggle{display:block;border:0;background:none;font-size:1.4rem}
+  .role-cards-grid{grid-template-columns:1fr}
+  .availability-grid{grid-template-columns:repeat(2,1fr)}
+  .camp-grid{grid-template-columns:1fr}
+  .hero-copy{width:100%}
+  .hero-visual{display:none}
+  .urgent{flex-direction:column;align-items:flex-start;gap:20px}
+}
