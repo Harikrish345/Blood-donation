@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BloodLink — Blood Bank Management System
 
 BloodLink is a responsive HTML/CSS/JavaScript frontend backed by a Java 17 Spring Boot API. It provides a clean starting point for donor registration, hospital workflows, inventory visibility, and role-based BBMS expansion.
@@ -21,3 +22,6 @@ The initial API includes `GET /api/blood-inventory`, `POST /api/auth/login`, and
 ## Structure
 
 `src/main/java/com/bbms` contains the Spring Boot entry point and REST controllers. `src/main/resources/static` contains the responsive frontend. Expand the controller layer with JPA entities/repositories for donors, hospitals, camps, appointments, requests, screening, cross-matching, notifications, audit logs, and reports as the project evolves.
+=======
+# Blood-donation
+>>>>>>> origin/main
